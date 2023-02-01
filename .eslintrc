@@ -1,0 +1,78 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true,
+        "es6": true,
+        "jest": true
+    },
+    "extends": [
+      "plugin:@next/next/recommended",
+      "plugin:import/errors",
+      "plugin:jsx-a11y/recommended",
+      "eslint:recommended",
+      "plugin:react/jsx-runtime",
+      "plugin:react/recommended",
+      "plugin:react-hooks/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "overrides": [
+      {
+        "files": ["*.ts", "*.tsx"], 
+        "extends": [
+          "plugin:@typescript-eslint/recommended"
+        ],
+        "rules": {
+          "@typescript-eslint/no-extra-semi": "off",
+          "react/prop-types": "off",
+          "react/react-in-jsx-scope": "off",
+          "jsx-a11y/anchor-is-valid": "off",
+          "react/no-unknown-property": ["error", { "ignore": ["jsx", "dataactions"] }],
+        },
+      }
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "project": "./tsconfig.json",
+      "tsconfigRootDir": "./",
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "plugins": [
+      "@typescript-eslint",
+      "import",
+      "react"
+    ],
+    "settings": {
+        "import/resolver": {
+          "typescript": {}
+        },
+        "react": {
+          "createClass": "createReactClass", 
+          "pragma": "React",
+          "fragment": "Fragment",
+          "version": "detect",
+          "flowVersion": "0.53"
+        },
+        "propWrapperFunctions": [
+          "forbidExtraProps",
+          {"property": "freeze", "object": "Object"},
+          {"property": "myFavoriteWrapper"},
+          {"property": "forbidExtraProps", "exact": true}
+        ],
+        "componentWrapperFunctions": [
+          "observer",
+          {"property": "styled"},
+          {"property": "observer", "object": "Mobx"},
+          {"property": "observer", "object": "<pragma>"}
+        ],
+        "formComponents": [
+          "CustomForm",
+          {"name": "Form", "formAttribute": "endpoint"}
+        ],
+        "linkComponents": [
+          "Hyperlink",
+          {"name": "Link", "linkAttribute": "to"}
+        ]
+      }
+}

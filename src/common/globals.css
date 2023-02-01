@@ -1,0 +1,85 @@
+body {
+  color: #292929;
+  font-family: Georgia, serif;
+  font-size: 1.1em;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.3;
+}
+
+p, li {
+  line-height: 1.6;
+}
+
+blockquote {
+  border: dashed;
+  margin: 0;
+  padding-inline: 1em;
+}
+
+header, footer {
+  padding-block: 2em;
+  text-align: center;
+}
+main {
+  margin-inline: auto;
+  padding: 5vh 10vw;
+  max-width: 600px;
+  font-style: italic;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+pre {
+  padding: 1em;
+  background: #2c2c2c;
+  color: #eee;
+}
+
+.error {
+  display: block;
+  text-align: center;
+  padding: 2em;
+  border-color: #e73c5e;
+  font-weight: bold;
+}
+
+.loader {
+  display: block;
+  text-align: center;
+  padding: 2em;
+  animation: greyish-thingy 4s infinite;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  color: white;
+  font-weight: bold;
+}
+
+@keyframes greyish-thingy {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.feed-item {
+  border-top: solid #ccc;
+}
+
+.feed-item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.feed-item a:hover {
+  text-decoration: underline;
+}
