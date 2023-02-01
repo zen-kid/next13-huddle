@@ -143,6 +143,9 @@ This scenario takes about 150msecs to be interactive.
 - Not easy to understand
 - Still in beta
 - Buggy
+
+----
+Read more on rendering: [https://theodorusclarence.com/blog/nextjs-fetch-method](https://theodorusclarence.com/blog/nextjs-fetch-method)
   `,
   },
   {
@@ -254,8 +257,7 @@ If deployed to Vercel/ AWS one can opt-in to the Edge Runtime.
     
 Guess what: Tobias Koppers, the creator of WebPack now works at Vercel.
 
-TurboPack is the successor to WebPack, written in Rust, up to 700 times
-faster that WebPack.
+TurboPack is the successor to WebPack, written in Rust:
 
 - 700x faster updates than Webpack
 - 10x faster updates than Vite with SWC
@@ -263,6 +265,8 @@ faster that WebPack.
 
 Turbopack has out-of-the-box support for Server Components, TypeScript, JSX, 
 CSS, Jest and more. No more babel.
+
+\`$ npm run dev -- --turbo\`
 
     `,
   },
